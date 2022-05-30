@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+<head>
+     <meta charset="UTF -8">
+     <title>Page Title</title>
+</head>
+
+<body>
+
+     <table class="table">
+         <thead>
+              <tr>
+                   <th scope"col">Codigo</th>
+                   <th scope"col">Nome</th>
+                   <th scope"col">Preço</th>
+                   <th scope"col">Lançamento</th>
+                   <th scope"col">Estilo</th>          
+              </tr>
+         </thead>
+         <tbody>
+         
+         <tr th:each="pessoa: ${listaPessoas}">
+              <td th:text="${pessoa.codigo}"></td>
+              <td th:text="${pessoa.nome}"></td>
+              <td th:text="${pessoa.preco}"></td>
+              <td th:text="${pessoa.lancamento}"></td>
+              <td th:text="${pessoa.estilo}"></td>
+
+         </tr>
+         
+         
+         </tbody>
+     </table>
+     
+     
+
+
+<script src="/js/bootstrap.min.js"> </script>
+</body>
+
+</html>
